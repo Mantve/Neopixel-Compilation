@@ -1,24 +1,22 @@
-void loop() {
-  StopIt=false;
-      if(showType==15)
-      {
-        if(RandomTime==0)
+void loop()
+{
+    StopIt = false;
+    if (showType == 15)
+    {
+        if (RandomTime == 0)
         {
-        RandomTime=millis();
+            RandomTime = millis();
         }
-        if(millis()-RandomTime > 10000)
+        if (millis() - RandomTime > 10000)
         {
-          RandomTime=millis();
-          a=random(1,15);
-        } 
-        
-      startShow(a);
-      }
-      
-      else{
-       RandomTime=0;
+            RandomTime = millis();
+            a = random(1, 15);
+        }
+        startShow(a);
+    }
+    else
+    {
+        RandomTime = 0;
         startShow(showType);
-        
-      }
-
+    }
 }
